@@ -11,6 +11,7 @@ Gemfile.lock
 gems.locked
 bin/*
 .bundle/*
+vendor
 
 # test kitchen
 .kitchen/
@@ -20,3 +21,8 @@ kitchen.local.yml
 Berksfile.lock
 .zero-knife.rb
 Policyfile.lock.json
+
+# Puppet
+.librarian
+Puppetfile.lock
+.tmp

@@ -1,0 +1,13 @@
+- hosts: localhost
+  tasks:
+  - name: Add kitchen_test user
+    user: name=kitchen_test state=present
+  - name: Allow 'kitchen_test' user to have passwordless sudo
+    lineinfile:
+      dest: /etc/sudoers.d/10_kitchen_test
+      state: present
+      create: yes
+      mode: 0440
+      regexp: '^%kitchen_test'
+      line: 'kitchen_test ALL=(ALL) NOPASSWD:ALL'
+      validate: 'visudo -cf %s'
