@@ -1,0 +1,16 @@
+---
+driver:
+  name: gce
+  project: <%= ENV["GCP_PROJECT"] %>
+  region: europe-west2
+
+transport:
+  username: <%= ENV['USER'] %>
+  ssh_key:
+    - ~/.ssh/google_compute_engine
+
+platforms:
+  - name: ubuntu-18.04
+    driver:
+      image_project: ubuntu-os-cloud
+      image_family: ubuntu-1804-lts

@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 
 gem 'kitchen-vagrant'
+gem 'kitchen-azurerm'
+gem 'kitchen-ec2'
+gem 'kitchen-google'
 gem 'chef-cli'
 gem 'kitchen-puppet'
 gem 'puppet'
